@@ -61,6 +61,7 @@ a {
   border-radius: 12px 12px 12px 0px;
   font-family: Mulish-regular;
   color: #000080;
+  background-color: #ffffff;
   word-wrap: break-word;
   display: table;
   width: auto !important;
@@ -89,9 +90,11 @@ a {
 }
 .chat-body {
   /* opacity: 0; */
-  width: 90%;
-  top: 20px;
+  width: 100%;
+  top: 40px;
+  min-height: 90vh;
   background-color: #ffffff;
+  /* background-image: url("../assets/images/wallpaper1.jpg"); */
   padding: 0px 20px;
   padding-bottom: 98px !important;
   transition: opacity 200ms;
@@ -216,7 +219,7 @@ a {
   justify-content: center;
   align-items: center;
   height: 62px;
-  background-color: #fff;
+  background-color: rgb(15, 17, 143);
   position: fixed;
   width: 100%;
   bottom: 0;

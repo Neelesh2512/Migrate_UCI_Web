@@ -7,9 +7,13 @@ import {
 import MessageWindow from "./MessageWindow";
 import TextBar from "./TextBar";
 import Notification from "./Notifications";
-
-
+import ProfilePage from '../pages/profilepage';
+import {useRouter} from 'next/router';
+import SecNavbar from './SecNavbar';
+import { Button, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react';
 const App = (): any => {
+
+    const router = useRouter();
     const initialState: {
       messages: any[];
       username: string;
@@ -94,19 +98,29 @@ const App = (): any => {
       const toSend = option.key+" "+option.text;
       sendMessage(toSend);
     }
-  
+    //wallpaper url
+    
+
+   
+    
+
+    //const imgUrl = "https://images.wallpapersden.com/image/download/black-panther-4k-dark_bGxta2WUmZqaraWkpJRobWllrWdma2U.jpg";
     return (
       <>
         <div className="chat-header">
           <div className="chat__header--info">
             <h3>Chakshu Gautam</h3>
           </div>
+          <SecNavbar />
+          {/* <button onClick={()=>router.push('/profilepage')}>Profile Page</button> */}
           <div className="chat__header--right">
             {/* <Notification /> */}
           </div>
         </div>
         <div className="chat-body-container">
-          <div className="chat-body">         
+          <div 
+            className="chat-body" 
+          >         
             <MessageWindow messages={state.messages} username={state.username} selected={selected}/>          
           </div>
           <TextBar onSend={sendMessage} />
